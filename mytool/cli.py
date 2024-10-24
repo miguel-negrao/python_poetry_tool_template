@@ -1,7 +1,6 @@
 import argparse
 import os
 
-
 def process_file(file, number, verbose):
     # Process the main file
     if not os.path.isfile(file):
