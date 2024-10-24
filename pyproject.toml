@@ -1,0 +1,16 @@
+[tool.poetry]
+name = "mytool"
+version = "0.1.0"
+description = "A simple command-line tool named mytool."
+authors = ["Your Name <your.email@example.com>"]
+package-mode = false
+
+[tool.poetry.dependencies]
+python = "^3.8"
+
+[tool.poetry.scripts]
+mytool = "mytool.cli:main"
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
