@@ -6,10 +6,16 @@ authors = ["Your Name <your.email@example.com>"]
 package-mode = false
 
 [tool.poetry.dependencies]
-python = "^3.8"
+python = ">=3.10,<3.14"
+#new libraries can be added with poetry add <name of library>
+numpy = "^2.1.2"
 
 [tool.poetry.scripts]
 mytool = "mytool.cli:main"
+build-exe = "mytool.build_exe:main"
+
+[tool.poetry.group.dev.dependencies]
+pyinstaller = "^6.11.0"
 
 [build-system]
 requires = ["poetry-core>=1.0.0"]

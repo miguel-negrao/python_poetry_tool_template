@@ -1,11 +1,7 @@
 import argparse
-import os
+import numpy as np 
 
 def process_file(file, number, verbose):
-    # Process the main file
-    if not os.path.isfile(file):
-        print(f"Error: The file '{file}' does not exist.")
-        return
     print(f"Processing file: {file}")
 
     # Print the number with its default value if not provided
@@ -14,6 +10,10 @@ def process_file(file, number, verbose):
     # Handle verbose flag with default set to False
     if verbose:
         print("Verbose mode is enabled.")
+
+    a = np.arange(5)
+    a[[0, 0, 2]] = [1, 2, 3]
+    print(a)
 
 def main():
     parser = argparse.ArgumentParser(description="MyTool File Processor Utility")
